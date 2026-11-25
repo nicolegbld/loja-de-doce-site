@@ -21,11 +21,10 @@ O preço muda conforme as opções escolhidas.
 ## Funcionamento
 
 O formulário calcula o valor dos doces e dos adicionais.
-Caso algum campo obrigatório não seja preenchido ou a
-quantidade seja inválida, aparece uma mensagem de erro.
 
-Quando o pedido é aceito, ele aparece na lista de
-criações e no histórico de pedidos.
+Caso algum campo obrigatório não seja preenchido ou a quantidade seja inválida, aparece uma mensagem de erro.
+
+Quando o pedido é aceito, ele aparece na lista de criações e no histórico de pedidos.
 
 O site também se adapta a telas menores.
 
@@ -37,8 +36,7 @@ O site também se adapta a telas menores.
 
 ## Como abrir o site
 
-Abrir o arquivo index.html pelo navegador ou utilizar
-o Live Server no VS Code.
+Abrir o arquivo index.html pelo navegador.
 
 ## Fontes das imagens
 
@@ -48,10 +46,7 @@ o Live Server no VS Code.
 
 ## Referências
 
-Utilizei o código de exemplo passado pelo professor
-como base para organizar o projeto. Também utilizei
-o ChatGPT para auxiliar na criação e correção dos
-códigos e na documentação.
+Utilizei o código de exemplo passado pelo professor como base para organizar o projeto. Também utilizei o ChatGPT para auxiliar na criação e correção dos códigos e na documentação.
 
 ## Autoria
 
