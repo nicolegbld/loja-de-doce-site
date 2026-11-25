@@ -12,8 +12,8 @@
 <body>
     <header class="topo">
         <div class="container">
-            <h1>SweetLab</h1>
-            <p>Uma confeitaria do seu jeito!</p>
+            <h1>DoceCapricho</h1>
+            <p>Seu doce, do seu jeitinho!</p>
         </div>
     </header>
 
@@ -25,86 +25,88 @@
 
             <ul class="galeria">
                 <li class="cartao">
-                    <img class="imagens-doces" src="img/donuts.jpg" alt="Donuts decorados">
+                    <img class="imagens-doces" src="img/donuts.jpg" alt="Donut com cobertura de morango">
                     <h3>Donut</h3>
                     <p>Rosquinhas deliciosas com recheios, coberturas e decorações personalizadas.</p>
-                    <p>A partir de R$ 10,00</p>
+                    <p class="preco">A partir de R$ 10,00</p>
                 </li>
 
                 <li class="cartao">
-                    <img class="imagens-doces" src="img/cupcake.jpg" alt="Cupcakes decorados">
+                    <img class="imagens-doces" src="img/cupcake.jpg" alt="Cupcakes decorados com morangos">
                     <h3>Cupcake</h3>
                     <p>Pequenos bolinhos com recheios e coberturas personalizadas.</p>
-                    <p>A partir de R$ 8,00</p>
+                    <p class="preco">A partir de R$ 8,00</p>
                 </li>
 
                 <li class="cartao">
-                    <img class="imagens-doces" src="img/cookie.jpg" alt="Cookies decorados">
+                    <img class="imagens-doces" src="img/cookie.jpg" alt="Cookies Red Velvet com gotas de chocolate branco">
                     <h3>Cookie</h3>
                     <p>Biscoitos deliciosos com diferentes sabores e decorações.</p>
-                    <p>A partir de R$ 6,00</p>
+                    <p class="preco">A partir de R$ 6,00</p>
                 </li>
             </ul>
+
+            <p class="aviso">Os preços iniciais correspondem aos doces sem adicionais. O valor final depende da personalização escolhida.</p>
         </section>
 
         <section class="painel">
             <h2>Monte seu doce</h2>
-            <p>Escolha os detalhes da sua criação.</p>
+            <p>Escolha os detalhes da sua criação e acompanhe o preço.</p>
 
             <form id="formulario" novalidate>
 
                 <label for="doce">Tipo de doce</label>
                 <select id="doce" required>
                     <option value="">Selecione um doce</option>
-                    <option value="Donut">Donut</option>
-                    <option value="Cupcake">Cupcake</option>
-                    <option value="Cookie">Cookie</option>
+                    <option value="Donut">Donut (R$ 10,00)</option>
+                    <option value="Cupcake">Cupcake (R$ 8,00)</option>
+                    <option value="Cookie">Cookie (R$ 6,00)</option>
                 </select>
 
                 <label for="massa">Massa</label>
                 <select id="massa" required>
                     <option value="">Selecione a massa</option>
-                    <option value="Baunilha">Baunilha</option>
-                    <option value="Chocolate">Chocolate</option>
-                    <option value="Red Velvet">Red Velvet</option>
+                    <option value="Baunilha">Baunilha (inclusa)</option>
+                    <option value="Chocolate">Chocolate (inclusa)</option>
+                    <option value="Red Velvet">Red Velvet (+ R$ 2,00)</option>
                 </select>
 
                 <label for="recheio">Recheio</label>
                 <select id="recheio" required>
                     <option value="">Selecione o recheio</option>
-                    <option value="Morango">Morango</option>
-                    <option value="Brigadeiro">Brigadeiro</option>
-                    <option value="Ninho">Ninho</option>
-                    <option value="Nutella">Nutella</option>
-                    <option value="Sem recheio">Sem recheio</option>
+                    <option value="Morango">Morango (+ R$ 2,00)</option>
+                    <option value="Brigadeiro">Brigadeiro (+ R$ 2,00)</option>
+                    <option value="Ninho">Ninho (+ R$ 2,00)</option>
+                    <option value="Nutella">Nutella (+ R$ 4,00)</option>
+                    <option value="Sem recheio">Sem recheio (R$ 0,00)</option>
                 </select>
 
                 <label for="cobertura">Cobertura</label>
                 <select id="cobertura" required>
                     <option value="">Selecione a cobertura</option>
-                    <option value="Chantilly">Chantilly</option>
-                    <option value="Chocolate">Chocolate</option>
-                    <option value="Buttercream">Buttercream</option>
-                    <option value="Sem cobertura">Sem cobertura</option>
+                    <option value="Chantilly">Chantilly (+ R$ 2,00)</option>
+                    <option value="Chocolate">Chocolate (+ R$ 2,00)</option>
+                    <option value="Sem cobertura">Sem cobertura (R$ 0,00)</option>
                 </select>
 
                 <label for="decoracao">Decoração</label>
                 <select id="decoracao" required>
                     <option value="">Selecione a decoração</option>
-                    <option value="Laços">Laços</option>
-                    <option value="Corações">Corações</option>
-                    <option value="Flores">Flores</option>
-                    <option value="Confeitos">Confeitos</option>
-                    <option value="Sem decoração">Sem decoração</option>
+                    <option value="Laços">Laços (+ R$ 3,00)</option>
+                    <option value="Corações">Corações (+ R$ 3,00)</option>
+                    <option value="Flores">Flores (+ R$ 3,00)</option>
+                    <option value="Confeitos">Confeitos (+ R$ 3,00)</option>
+                    <option value="Sem decoração">Sem decoração (R$ 0,00)</option>
                 </select>
 
                 <label for="quantidade">Quantidade</label>
-                <input type="number" id="quantidade" min="1" max="100" step="1" required>
+                <input type="number" id="quantidade" min="1" max="100" step="1" placeholder="De 1 a 100 unidades" required>
 
                 <label for="observacao">Observações (opcional)</label>
                 <textarea id="observacao" rows="3" placeholder="Algum detalhe especial?"></textarea>
 
                 <button type="submit">Finalizar personalização</button>
+                <button type="reset" class="limpar">Limpar escolhas</button>
 
                 <p id="mensagem" class="mensagem" role="status"></p>
 
@@ -113,11 +115,24 @@
 
         <section class="painel">
             <h2>Resumo do pedido</h2>
-            <p>Confira os detalhes do seu doce personalizado.</p>
+            <p>Acompanhe os detalhes e valores da sua criação.</p>
+
 
             <dl class="resumo">
-                <dt>Doce escolhido</dt>
-                <dd id="doce-resumo">-</dd>
+                <dt>Preço inicial</dt>
+                <dd id="base-resumo">R$ 0,00</dd>
+
+                <dt>Massa</dt>
+                <dd id="massa-resumo">-</dd>
+
+                <dt>Recheio</dt>
+                <dd id="recheio-resumo">-</dd>
+
+                <dt>Cobertura</dt>
+                <dd id="cobertura-resumo">-</dd>
+
+                <dt>Decoração</dt>
+                <dd id="decoracao-resumo">-</dd>
 
                 <dt>Quantidade</dt>
                 <dd id="quantidade-resumo">0</dd>
@@ -125,9 +140,11 @@
                 <dt>Valor unitário</dt>
                 <dd id="unitario">R$ 0,00</dd>
 
-                <dt>Valor total</dt>
+                <dt class="total-titulo">Valor total</dt>
                 <dd id="total">R$ 0,00</dd>
             </dl>
+
+            <p class="aviso">As imagens são ilustrativas. Os valores são calculados conforme suas escolhas.</p>
         </section>
 
         <section class="painel largo">
@@ -138,14 +155,15 @@
 
         <section class="painel largo">
             <h2>Histórico de pedidos</h2>
+            <p>Confira os registros das personalizações realizadas nesta sessão.</p>
             <ul id="registro" class="registro"></ul>
         </section>
 
     </main>
 
     <footer class="rodape">
-        <p>SweetLab | Feito para adoçar seus momentos.</p>
-        <p>Confeitaria fictícia desenvolvida para fins educacionais.</p>
+        <p>DoceCapricho | Feito para adoçar seus momentos.</p>
+        <p>Confeitaria fictícia desenvolvida por Nicole Gonçalves Baldoino.</p>
     </footer>
 </body>
 </html>
