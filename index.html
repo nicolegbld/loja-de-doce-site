@@ -4,159 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineList</title>
+    <meta name="description" content="Personalize seus doces na SweetLab.">
+    <title>SweetLab</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-
-    <header>
-        <h1>CineList</h1>
-        <p>Filmes, histórias e momentos</p>
-
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#filmes">Filmes</a>
-            <a href="#curiosidades">Curiosidades</a>
-            <a href="#sessao">Minha sessão</a>
-        </nav>
+    <header class="topo">
+        <div class="container">
+            <h1>SweetLab</h1>
+            <p>Uma confeitaria do seu jeito!</p>
+        </div>
     </header>
 
-    <main>
+    <main class="container grade">
 
-        <!-- Apresentação -->
-        <section id="inicio">
-            <h2>Bem-vindo ao CineList</h2>
+        <section class="painel largo">
+            <h2>Conheça nossos doces</h2>
+            <p>Escolha seu doce favorito e personalize cada detalhe.</p>
 
-            <p>
-                Nem sempre é fácil escolher o que assistir, por isso o CineList
-                reúne alguns filmes para diferentes gostos e momentos.
-                Aqui você pode conhecer algumas recomendações, descobrir
-                curiosidades sobre o cinema e até calcular quanto custaria
-                uma sessão de filmes com seus amigos.
-            </p>
+            <ul class="galeria">
+                <li class="cartao">
+                    <img class="imagens-doces" src="img/donuts.jpg" alt="Donuts decorados">
+                    <h3>Donut</h3>
+                    <p>Rosquinhas deliciosas com recheios, coberturas e decorações personalizadas.</p>
+                    <p>A partir de R$ 10,00</p>
+                </li>
+
+                <li class="cartao">
+                    <img class="imagens-doces" src="img/cupcake.jpg" alt="Cupcakes decorados">
+                    <h3>Cupcake</h3>
+                    <p>Pequenos bolinhos com recheios e coberturas personalizadas.</p>
+                    <p>A partir de R$ 8,00</p>
+                </li>
+
+                <li class="cartao">
+                    <img class="imagens-doces" src="img/cookie.jpg" alt="Cookies decorados">
+                    <h3>Cookie</h3>
+                    <p>Biscoitos deliciosos com diferentes sabores e decorações.</p>
+                    <p>A partir de R$ 6,00</p>
+                </li>
+            </ul>
         </section>
 
-        <!-- Filmes recomendados -->
-        <section id="filmes">
-            <h2>Filmes para assistir</h2>
+        <section class="painel">
+            <h2>Monte seu doce</h2>
+            <p>Escolha os detalhes da sua criação.</p>
 
-            <div class="lista-filmes">
+            <form id="formulario" novalidate>
 
-                <article class="filme">
-                    <img src="coraline.jpg"
-                         alt="Cartaz do filme Coraline">
+                <label for="doce">Tipo de doce</label>
+                <select id="doce" required>
+                    <option value="">Selecione um doce</option>
+                    <option value="Donut">Donut</option>
+                    <option value="Cupcake">Cupcake</option>
+                    <option value="Cookie">Cookie</option>
+                </select>
 
-                    <h3>Coraline</h3>
+                <label for="massa">Massa</label>
+                <select id="massa" required>
+                    <option value="">Selecione a massa</option>
+                    <option value="Baunilha">Baunilha</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Red Velvet">Red Velvet</option>
+                </select>
 
-                    <p>
-                        Uma garota encontra uma realidade alternativa
-                        aparentemente perfeita, mas que esconde segredos
-                        assustadores.
-                    </p>
+                <label for="recheio">Recheio</label>
+                <select id="recheio" required>
+                    <option value="">Selecione o recheio</option>
+                    <option value="Morango">Morango</option>
+                    <option value="Brigadeiro">Brigadeiro</option>
+                    <option value="Ninho">Ninho</option>
+                    <option value="Nutella">Nutella</option>
+                    <option value="Sem recheio">Sem recheio</option>
+                </select>
 
-                    <p><strong>Gênero:</strong> Fantasia sombria</p>
-                </article>
+                <label for="cobertura">Cobertura</label>
+                <select id="cobertura" required>
+                    <option value="">Selecione a cobertura</option>
+                    <option value="Chantilly">Chantilly</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Buttercream">Buttercream</option>
+                    <option value="Sem cobertura">Sem cobertura</option>
+                </select>
 
-                <article class="filme">
-                    <img src="10coisas.jpg"
-                         alt="Cartaz do filme 10 Coisas que Eu Odeio em Você">
+                <label for="decoracao">Decoração</label>
+                <select id="decoracao" required>
+                    <option value="">Selecione a decoração</option>
+                    <option value="Laços">Laços</option>
+                    <option value="Corações">Corações</option>
+                    <option value="Flores">Flores</option>
+                    <option value="Confeitos">Confeitos</option>
+                    <option value="Sem decoração">Sem decoração</option>
+                </select>
 
-                    <h3>10 Coisas que Eu Odeio em Você</h3>
+                <label for="quantidade">Quantidade</label>
+                <input type="number" id="quantidade" min="1" max="100" step="1" required>
 
-                    <p>
-                        Uma história de romance, confusões e duas pessoas
-                        que acabam se aproximando de uma forma inesperada.
-                    </p>
+                <label for="observacao">Observações (opcional)</label>
+                <textarea id="observacao" rows="3" placeholder="Algum detalhe especial?"></textarea>
 
-                    <p><strong>Gênero:</strong> Comédia romântica</p>
-                </article>
+                <button type="submit">Finalizar personalização</button>
 
-                <article class="filme">
-                    <img src="10dias.jpg"
-                         alt="Cartaz do filme Como Perder um Homem em 10 Dias">
-
-                    <h3>Como Perder um Homem em 10 Dias</h3>
-
-                    <p>
-                        Uma jornalista e um publicitário entram em um jogo
-                        de apostas amorosas, mas seus planos começam a
-                        sair do controle.
-                    </p>
-
-                    <p><strong>Gênero:</strong> Comédia romântica</p>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Curiosidades -->
-        <section id="curiosidades">
-            <h2>Curiosidades sobre o cinema</h2>
-
-            <div class="caixa-curiosidades">
-                <ul>
-                    <li>
-                        Os primeiros filmes eram curtos e geralmente
-                        não possuíam som sincronizado.
-                    </li>
-
-                    <li>
-                        A trilha sonora pode mudar completamente a
-                        sensação de uma cena.
-                    </li>
-
-                    <li>
-                        Algumas produções levam anos entre o planejamento
-                        e o lançamento.
-                    </li>
-
-                    <li>
-                        Existem filmes que utilizam cenários reais,
-                        animações e efeitos digitais na mesma produção.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Formulário de cálculo -->
-        <section id="sessao">
-            <h2>Planeje sua sessão</h2>
-
-            <p>
-                Vai assistir a um filme com amigos? Calcule o valor
-                dos ingressos e dos lanches para descobrir o custo
-                total da sessão.
-            </p>
-
-            <form id="formSessao">
-
-                <label for="pessoas">Quantidade de pessoas:</label>
-                <input type="number" id="pessoas" name="pessoas"
-                       placeholder="Ex.: 4" min="1" required>
-
-                <label for="ingresso">Valor de cada ingresso (R$):</label>
-                <input type="number" id="ingresso" name="ingresso"
-                       placeholder="Ex.: 25" min="0" step="0.01" required>
-
-                <label for="lanches">Valor total dos lanches (R$):</label>
-                <input type="number" id="lanches" name="lanches"
-                       placeholder="Ex.: 40" min="0" step="0.01" required>
-
-                <button type="submit">Calcular</button>
-
-                <div id="resultado" aria-live="polite"></div>
+                <p id="mensagem" class="mensagem" role="status"></p>
 
             </form>
         </section>
 
+        <section class="painel">
+            <h2>Resumo do pedido</h2>
+            <p>Confira os detalhes do seu doce personalizado.</p>
+
+            <dl class="resumo">
+                <dt>Doce escolhido</dt>
+                <dd id="doce-resumo">-</dd>
+
+                <dt>Quantidade</dt>
+                <dd id="quantidade-resumo">0</dd>
+
+                <dt>Valor unitário</dt>
+                <dd id="unitario">R$ 0,00</dd>
+
+                <dt>Valor total</dt>
+                <dd id="total">R$ 0,00</dd>
+            </dl>
+        </section>
+
+        <section class="painel largo">
+            <h2>Suas criações</h2>
+            <p id="vazio">Nenhum doce personalizado até o momento.</p>
+            <ul id="lista" class="lista"></ul>
+        </section>
+
+        <section class="painel largo">
+            <h2>Histórico de pedidos</h2>
+            <ul id="registro" class="registro"></ul>
+        </section>
+
     </main>
 
-    <footer>
-        <p>CineList | Um cantinho para os amantes de cinema</p>
-        <p>Projeto desenvolvido para Programação de Aplicativos</p>
+    <footer class="rodape">
+        <p>SweetLab | Feito para adoçar seus momentos.</p>
+        <p>Confeitaria fictícia desenvolvida para fins educacionais.</p>
     </footer>
-
-    <script src="js/script.js"></script>
-
 </body>
 </html>

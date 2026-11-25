@@ -1,0 +1,260 @@
+
+/* Cores principais do site */
+:root{
+    --creme: #fff8ee;
+    --rosa-claro: #fadce3;
+    --rosa: #efa6b9;
+    --cereja: #c94559;
+    --marrom: #75443b;
+    --branco: #ffffff;
+    --vermelho: #c8102e;
+    --verde: #1e7b4a;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--creme);
+    color: var(--marrom);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.topo{
+    background-color: var(--rosa-claro);
+    color: var(--cereja);
+    text-align: center;
+    border-bottom: 4px solid var(--rosa);
+}
+
+.topo h1{
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.topo p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Organização da página */
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+.grade{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    gap: 20px;
+}
+
+.painel{
+    background-color: var(--branco);
+    padding: 24px;
+    border-radius: 15px;
+    border: 1px solid var(--rosa);
+    box-shadow: 0 4px 10px rgba(117, 68, 59, 0.1);
+}
+
+.largo{
+    grid-column: 1 / -1;
+}
+
+h2{
+    color: var(--cereja);
+    margin-top: 0;
+}
+
+h3{
+    color: var(--cereja);
+}
+
+/* Galeria de doces */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.cartao{
+    background-color: var(--rosa-claro);
+    padding: 18px;
+    border-radius: 15px;
+    border: 2px solid var(--rosa);
+    overflow-wrap: anywhere;
+}
+
+.imagens-doces{
+    width: 250px;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--branco);
+    transition: 0.3s;
+}
+
+.imagens-doces:hover{
+    transform: scale(1.07);
+}
+
+.galeria .cartao p:last-child{
+    color: var(--cereja);
+    font-weight: bold;
+}
+
+/* Formulário de personalização */
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--rosa);
+    border-radius: 8px;
+    background-color: var(--creme);
+    color: var(--marrom);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea{
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: 2px solid var(--cereja);
+}
+
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: var(--cereja);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: var(--marrom);
+}
+
+button:focus-visible{
+    outline: 3px solid var(--marrom);
+    outline-offset: 3px;
+}
+
+/* Mensagens de validação */
+.mensagem{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.erro{
+    color: var(--vermelho);
+}
+
+.sucesso{
+    color: var(--verde);
+}
+
+/* Resumo do pedido */
+.resumo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background-color: var(--rosa-claro);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.resumo dt{
+    font-weight: bold;
+}
+
+.resumo dd{
+    margin: 0;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+#total{
+    color: var(--cereja);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Lista de criações */
+.lista{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Histórico dos pedidos */
+.registro{
+    list-style: none;
+    padding: 0;
+}
+
+.registro li{
+    background-color: var(--creme);
+    border-left: 4px solid var(--rosa);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* Rodapé */
+.rodape{
+    background-color: var(--rosa-claro);
+    color: var(--marrom);
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid var(--rosa);
+}
+
+/* Adaptação para celulares */
+@media (max-width: 850px){
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px){
+    .grade{
+        grid-template-columns: 1fr;
+    }
+
+    .painel{
+        padding: 16px;
+    }
+
+    .topo h1{
+        font-size: 2.5rem;
+    }
+
+    .container{
+        padding: 15px;
+    }
+}
