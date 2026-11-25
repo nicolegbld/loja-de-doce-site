@@ -1,4 +1,3 @@
-
 const formulario = document.querySelector("#formulario");
 const mensagem = document.querySelector("#mensagem");
 const lista = document.querySelector("#lista");
@@ -129,37 +128,8 @@ function mostrarAdicional(nome, valor){
     return nome + " (" + formatarValor(valor) + ")";
 }
 
-// Altera a imagem conforme o doce escolhido
-function atualizarImagem(doce){
-    if(doce === "Donut"){
-        imagem.src = "img/donut.jpg";
-        imagem.alt = "Exemplo de donut decorado";
-        imagem.hidden = false;
-
-    }else if(doce === "Cupcake"){
-        imagem.src = "img/cupcake.jpg";
-        imagem.alt = "Exemplo de cupcake decorado";
-        imagem.hidden = false;
-
-    }else if(doce === "Cookie"){
-        imagem.src = "img/cookie.jpg";
-        imagem.alt = "Exemplo de cookie Red Velvet";
-        imagem.hidden = false;
-
-    }else{
-        imagem.hidden = true;
-        imagem.removeAttribute("src");
-        imagem.alt = "";
-    }
-}
-
 // Atualiza o resumo do pedido
 function atualizarResumo(dados){
-    atualizarImagem(dados.doce);
-
-    document.querySelector("#doce-resumo").textContent =
-        dados.doce || "Seu doce personalizado";
-
     document.querySelector("#base-resumo").textContent =
         formatarValor(dados.base);
 
@@ -191,22 +161,6 @@ function atualizarResumo(dados){
 
         document.querySelector("#total").textContent =
             quantidadeValida ? formatarValor(dados.total) : "-";
-    }
-
-    if(dados.doce === ""){
-        document.querySelector("#aviso-resumo").textContent =
-            "Escolha um doce para começar.";
-
-    }else if(dados.massa === "" || dados.recheio === "" ||
-        dados.cobertura === "" || dados.decoracao === "" ||
-        !quantidadeValida){
-
-        document.querySelector("#aviso-resumo").textContent =
-            "Preço parcial. Complete as escolhas e informe uma quantidade válida.";
-
-    }else{
-        document.querySelector("#aviso-resumo").textContent =
-            "Confira os valores antes de finalizar.";
     }
 }
 
@@ -268,7 +222,7 @@ function registrar(texto, tipo){
     registro.appendChild(item);
 }
 
-// Atualiza a prévia quando o usuário altera os campos
+// Atualiza os preços quando o usuário altera os campos
 formulario.addEventListener("input", function(){
     mensagem.textContent = "";
     mensagem.className = "mensagem";
