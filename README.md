@@ -2,12 +2,10 @@
 
 ## Sobre o site
 
-Escolhi criar um site de uma doceria fictícia, onde o
-usuário pode montar seu próprio doce de acordo com
+Escolhi criar um site de uma doceria fictícia, onde o usuário pode montar seu próprio doce de acordo com
 suas preferências.
 
-O site possui três opções de doces: donut, cupcake
-e cookie. É possível escolher a massa, o recheio,
+O site possui três opções de doces: donut, cupcake e cookie. É possível escolher a massa, o recheio,
 a cobertura, a decoração e a quantidade.
 
 O preço muda conforme as opções escolhidas.
@@ -46,7 +44,7 @@ Abrir o arquivo index.html pelo navegador.
 
 ## Referências
 
-Utilizei o código de exemplo passado pelo professor como base para organizar o projeto. Também utilizei o ChatGPT para auxiliar na criação e correção dos códigos e na documentação.
+Utilizei o código de exemplo passado pelo professor como base para organizar o projeto. Também utilizei o ChatGPT e o Google para auxiliar na criação e correção dos códigos e na documentação.
 
 ## Autoria
 
