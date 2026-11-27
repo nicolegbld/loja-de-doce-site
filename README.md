@@ -50,6 +50,6 @@ Utilizei o código de exemplo passado pelo professor como base para organizar o 
 
 ## Autoria
 
-Nicole Gonçalves
+Nicole Gonçalves Baldoino
 
 Técnico em Desenvolvimento de Sistemas - SESI/SENAI
